@@ -1,25 +1,33 @@
-import logo from './logo.svg';
+import React, { Component } from 'react';
 import './App.css';
+import StatsContainer from './StatsContainer'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+
+class App extends Component {
+  state = {
+    teamData: []
+  }
+
+  componentDidMount() {
+    fetch("http://localhost:3000/teams")
+      .then(resp => resp.json())
+      .then((teamData) => this.setState({ teamData })); 
+  }; 
+  
+  
+  render() {
+    return (
+      <div className="App">
+        <div className="App-header">
+          <center><h1>NBA Stats</h1></center>
+          <StatsContainer teamData={this.state.teamData} />
+          
+        </div>
+        
+      </div>
+    );
+  }
 }
 
 export default App;
