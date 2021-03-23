@@ -1,0 +1,46 @@
+.season-leaders-content {
+  margin: 1rem;
+  justify-content: center;
+}
+
+.card {
+  display: inline-grid;
+  flex: 0 1 30%;
+  width: 8rem;
+  height: 17rem;
+  margin: 1rem;
+  padding: 10px;
+  text-align: center; 
+  background-color: #fbfcfe;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.stat-header {
+  margin-bottom: 20px;
+  color: rgb(40, 127, 197);
+
+}
+.stat-content {
+  padding: 20px;
+}
+
+li {
+  /* list-style: none; */
+  align-items: left;
+  text-align: left;
+}
+
+table.stat-leader-top {
+  padding: 10px; 
+}
+
+td.stat-leader-team {
+  width: 240px; 
+  text-align: left;
+  font-weight: 400;
+}
+
+td.stat-leader-value {
+  text-align: left;
+  font-weight: 500;
+}

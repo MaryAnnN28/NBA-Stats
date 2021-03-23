@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
-import StatsTable from './StatsTable'
-import SeasonLeaders from './SeasonLeaders'
-import './Stats.css'
+import StatsTable from './StatsTable';
+import SeasonLeaders from './SeasonLeaders';
+
 
 
 
 class App extends Component {
   state = {
     teamData: [],
-    sort: "None",
+    sort: "",
     filter: "All",
     search: ""
   }
@@ -70,6 +70,7 @@ class App extends Component {
             handleFilter={this.handleFilter}
             handleSearch={this.handleSearch}
           />
+
 
           <SeasonLeaders
             teamData={this.state.teamData}

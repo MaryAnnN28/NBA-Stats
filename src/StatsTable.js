@@ -4,11 +4,11 @@ import { Button } from 'react-bootstrap';
 
 const StatsTable = ({ teamData, sort, handleSort, handleSearch, handleFilter }) => {
 
-  const [value, setValue] = useState("None");
+  const [value, setValue] = useState("");
 
-  // function sortByColumn(a, colIndex, reverse) {
-  //   if ()
-  // }
+  const teamsAbove500 = teamData.filter((team) => {
+    return team.W_Percent 
+  })
 
     return (
       <div>
