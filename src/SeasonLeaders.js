@@ -128,6 +128,68 @@ const SeasonLeaders = ({ teamData }) => {
                 </ol>
               </div>
             </div>
+
+            <div class="card">
+              <div class="stat-content">
+              <h4 class="stat-header">Field Goal Percentage</h4>
+                <ol>
+                  {teamData.sort((a, b) => a.FG_Percent > b.FG_Percent ? -1 : 1).slice(0, 5)
+                    .map(team =>
+                      <>
+                        <table className="stat-leader-top">
+                          <td className="stat-leader-team">
+                            <li key={team.id}>{team.name}</li>  
+                          </td>
+                          <td className="stat-leader-value">
+                            {team.FG_Percent}       
+                          </td>
+                        </table>
+                    </>   
+                  )}
+                </ol>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="stat-content">
+              <h4 class="stat-header">Three Pointers Made</h4>
+                <ol>
+                  {teamData.sort((a, b) => a.Three_PM > b.Three_PM ? -1 : 1).slice(0, 5)
+                    .map(team =>
+                      <>
+                        <table className="stat-leader-top">
+                          <td className="stat-leader-team">
+                            <li key={team.id}>{team.name}</li>  
+                          </td>
+                          <td className="stat-leader-value">
+                            {team.Three_PM}       
+                          </td>
+                        </table>
+                    </>   
+                  )}
+                </ol>
+              </div>
+            </div>
+            <div class="card">
+              <div class="stat-content">
+              <h4 class="stat-header">Three Point Percentage</h4>
+                <ol>
+                  {teamData.sort((a, b) => a.ThreeP_Percent > b.ThreeP_Percent ? -1 : 1).slice(0, 5)
+                    .map(team =>
+                      <>
+                        <table className="stat-leader-top">
+                          <td className="stat-leader-team">
+                            <li key={team.id}>{team.name}</li>  
+                          </td>
+                          <td className="stat-leader-value">
+                            {team.ThreeP_Percent}       
+                          </td>
+                        </table>
+                    </>   
+                  )}
+                </ol>
+              </div>
+            </div>
        
              
             
