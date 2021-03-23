@@ -52,3 +52,11 @@ td.team-name {
   font-weight: 500;
   color:rgb(16, 86, 143);
 }
+
+div.search-input {
+  justify-content: center;
+  left: 80%;
+  display: flex;
+  position: relative;
+  width: 280px;
+}

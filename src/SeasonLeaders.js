@@ -3,6 +3,8 @@ import './SeasonLeaders.css'
 
 const SeasonLeaders = ({ teamData }) => {
 
+  const teamNames = ("Jazz", "Sixers", "Nets", "Suns", "Lakers", "Clippers", "Bucks")
+
 
     return (
       <div className="season-leaders-content">
@@ -190,9 +192,9 @@ const SeasonLeaders = ({ teamData }) => {
                 </ol>
               </div>
             </div>
-       
-             
-            
+
+          
+
             
           </div>
       

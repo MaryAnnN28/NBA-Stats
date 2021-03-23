@@ -1,17 +1,18 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './Stats.css'
-import { Button } from 'react-bootstrap'; 
 
-const StatsTable = ({ teamData, sort, handleSort, handleSearch, handleFilter }) => {
+const StatsTable = ({ teamData, search, handleSearch }) => {
 
-  const [value, setValue] = useState("");
 
     return (
       <div>
+        <div className="search-input">
+        <input className="search-input" name="search" placeholder="Search by Team" value={search} onChange={handleSearch} />
+        </div>
         <table className="nba-stats-table" width="90%">
           <thead>
             <tr className="nba-stats-header">
-              <th className="team-header" align="center">Team</th>
+              <th className="team-header">Team</th>
               <th className="team-header">GP</th>
               <th className="team-header">W</th>
               <th className="team-header">L</th>
